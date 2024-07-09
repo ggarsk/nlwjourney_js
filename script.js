@@ -1,19 +1,2 @@
-const mensagem = 'Boa noite!'
-
-alert(mensagem)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const section = document.querySelector('section')
+section.innerHTML = 'Alô!'
