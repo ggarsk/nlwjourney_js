@@ -27,7 +27,7 @@ JavaScript
 - É uma linguagem interpretada pelo browser
 - É uma linguagem dinâmica
 - É uma linguagem orientada a objeto
-- ECMAScript mantém a linguagem funcionando e sempre trazendo novidades
+- ECMAScript regulamenta o JavaScript, mantém a linguagem funcionando e sempre traz novidades
 
 Conceitos
 - Comentários

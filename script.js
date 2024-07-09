@@ -1,3 +1,9 @@
+// Funcionalidade para aplicar um darkMode na página. Por padrão, será dark e o botão dará opção de deixar white.
+document.getElementById('whiteMode').addEventListener('click', function() {
+    document.documentElement.classList.toggle('white-mode');
+});
+
+
 // objeto em js - {}
 const atividade = {
     nome: 'Almoço',

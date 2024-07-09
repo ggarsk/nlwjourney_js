@@ -1,4 +1,10 @@
 html {
     background-color: #000000;
     color: #FFFFFF;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+html.white-mode {
+    background-color: #FFFFFF;
+    color: #000000;
 }
