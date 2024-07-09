@@ -36,7 +36,7 @@ Conceitos
 - Operadores (atribuição [=], concatenação [+], matemáticos)
 - Tipos de dados (string [texto], number [número], boolean [true or false], Date [data])
 - Estrutura de dados (functions, objects, arrays)
-- Controle de fluxo (if e else)
+- Controle de fluxo (if/else)
 - Estrutura de repetição (for)
 - Manipulação e gestão de dados (manipulação do DOM)
     - Conversão de dados
@@ -54,3 +54,11 @@ Algoritmo
         Vê como o simples ato de abrir uma porta segue uma sequência de passos (ainda finita) maior do que simplesmente "abra a porta"? O truque é saber como ENSINAR o computador a seguí-los. 
 
         ps: Claro que, por questões lógicas, o computador não vai pular da sua mesa e ir abrir a porta. Isto é apenas uma ilustração do que é algoritmo.
+
+    - Em JavaScript, o problema é mais "digital" que abrir portas e, para resolvê-los, precisamos seguir fases de resolução de problemas
+        01. Coletar os dados
+            - Coletamos os dados com prompts, campos de texto/seleção no HTML e armazenamos em variáveis, objetos ou arrays.
+        02. Processar os dados
+            - Criamos algoritmos que vão usar esses dados para realizar alguma tarefa que programarmos para realizar.
+        03. Apresentar os dados
+            - Apresentamos os dados ou resultados com console.log, alert ou inserindo (com inner.HTML) a apresentação em algum elemento HTML da nossa página (manipulação do DOM)
