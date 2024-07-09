@@ -1,19 +1,38 @@
 // objeto em js - {}
 const atividade = {
     nome: 'Almoço',
-    data: new Date('2024-07-09 10:00'),
-    finalizada: false
+    data: new Date('2024-07-09 12:00'),
+    finalizada: true
 }
+// Este é um objeto separado do array atividades para estudarmos/entendermos objetos em js, mas é fácil dar Ctrl + X da linha 3 a 4 e colocar dentro de atividades.
+
+// lista, array, vetor em js - []
+const atividades = [
+    atividade,
+    {
+        nome: 'Academia em grupo',
+        data: new Date('2024-07-10 08:00'),
+        finalizada: false
+    },
+    {
+        nome: 'Natação',
+        data: new Date('2024-07-15 15:00'),
+        finalizada: true
+    }
+]
 
 // arrow function
 const criarItemAtividade = (atividade) => {
     let input = '<input type="checkbox"'
 
     if(atividade.finalizada) {
-        input = input + 'checked'
+        input += 'checked'
     }
 
-    input = input + '>'
+    // input = input + '>'
+    // No lugar de concatenar variáveis dessa forma acima, podemos usar += para poupar tempo.
+    // Faça o teste :) comente a linha 34 e descomente a linha 31. Dá na mesma, mas uma é mais bonita e rápida que a outra.
+    input += '>'
 
     return `
     <div>
@@ -25,5 +44,11 @@ const criarItemAtividade = (atividade) => {
 }
 
 const section = document.querySelector('section')
-section.innerHTML = criarItemAtividade(atividade)
+
+for(let atividade of atividades) {
+    section.innerHTML += criarItemAtividade(atividade)
+}
+
+
+
 
