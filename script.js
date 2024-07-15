@@ -77,6 +77,7 @@ const criarItemAtividade = (atividade) => {
 
 const atualizarListaAtv = () => {
     const section = document.querySelector('section')
+    section.innerHTML = ''
 
     // verificar se a lista está vazia
     if(atividades.length == 0){
@@ -94,6 +95,21 @@ atualizarListaAtv()
 
 const salvarAtividade = (event) => {
     event.preventDefault()
+    const dadosDoFormulario = new FormData(event.target)
+
+    const nome = dadosDoFormulario.get('atividade')
+    const dia = dadosDoFormulario.get('dia')
+    const hora = dadosDoFormulario.get('data')
+    const data = `${dia} ${hora}`
+
+    const atividade = {
+        nome,
+        data,
+        finalizada: false
+    }
+
+    atividades = [atividade, ...atividades]
+    atualizarListaAtv()
 }
 
 const criarDiasSelecao = () => {
@@ -129,7 +145,8 @@ const criarHorasSelecao = () => {
     let horasDisponiveis = ''
 
     for(let i = 6; i < 23; i++) {
-        horasDisponiveis += `<option>${i}</option>`
+        horasDisponiveis += `<option value="${i}:00">${i}:00</option>`
+        horasDisponiveis += `<option value="${i}:30">${i}:30</option>`
     }
 
     document.querySelector('select[name="hora"]')
