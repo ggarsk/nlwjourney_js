@@ -1,5 +1,5 @@
 // Funcionalidade para aplicar um whiteMode na página. Por padrão, será dark e o botão dará opção de deixar white.
-document.getElementById('whiteMode'),addEventListener('click', function() {
+document.getElementById('whiteMode').addEventListener('click', function() {
     this.document.documentElement.classList.toggle('white-mode')
 })
 
@@ -120,3 +120,17 @@ const criarDiasSelecao = () => {
 }
 
 criarDiasSelecao()
+
+
+const criarHorasSelecao = () => {
+    let horasDisponiveis = ''
+
+    for(let i = 6; i < 23; i++) {
+        horasDisponiveis += `<option>${i}</option>`
+    }
+
+    document.querySelector('select[name="hora"]')
+    .innerHTML = horasDisponiveis
+}
+
+criarHorasSelecao()
