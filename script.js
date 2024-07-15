@@ -3,6 +3,7 @@ const btn = document.getElementById('whiteMode')
 
 btn.addEventListener('click', function() {
     document.documentElement.classList.toggle('white-mode')
+    btn.classList.toggle('dark-mode')
 })
 
 const formatador = (data) => {

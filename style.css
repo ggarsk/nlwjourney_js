@@ -14,7 +14,6 @@ html.white-mode {
 
     font-family: 'Poppins', monospace;
 
-
     color: #000000;
     background-color: #ffffff;
 
@@ -25,4 +24,9 @@ html.white-mode {
     border-radius: 4px;
 
     text-transform: uppercase;
+}
+
+#whiteMode.dark-mode {
+    background-color: #000000;
+    color: #FFFFFF;
 }
