@@ -1,6 +1,8 @@
 // Funcionalidade para aplicar um whiteMode na página. Por padrão, será dark e o botão dará opção de deixar white.
-document.getElementById('whiteMode').addEventListener('click', function() {
-    this.document.documentElement.classList.toggle('white-mode')
+const btn = document.getElementById('whiteMode')
+
+btn.addEventListener('click', function() {
+    document.documentElement.classList.toggle('white-mode')
 })
 
 const formatador = (data) => {
