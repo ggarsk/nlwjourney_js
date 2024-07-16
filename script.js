@@ -102,7 +102,7 @@ const salvarAtividade = (event) => {
 
     const nome = dadosDoFormulario.get('atividade')
     const dia = dadosDoFormulario.get('dia')
-    const hora = dadosDoFormulario.get('data')
+    const hora = dadosDoFormulario.get('hora')
     const data = `${dia} ${hora}`
 
     const atividade = {
@@ -123,7 +123,7 @@ const criarDiasSelecao = () => {
         '2024-08-15',
         '2024-08-21',
         '2024-08-28',
-        '2024-09-10',
+        '2024-09-10'
     ]
 
     let diasSelecao = ''
@@ -139,7 +139,7 @@ const criarDiasSelecao = () => {
         `
     }
 
-    document.querySelector('select[name="dia"').innerHTML = diasSelecao
+    document.querySelector('select[name="dia"]').innerHTML = diasSelecao
 }
 
 criarDiasSelecao()
@@ -153,8 +153,7 @@ const criarHorasSelecao = () => {
         horasDisponiveis += `<option value="${i}:30">${i}:30</option>`
     }
 
-    document.querySelector('select[name="hora"]')
-    .innerHTML = horasDisponiveis
+    document.querySelector('select[name="hora"]').innerHTML = horasDisponiveis
 }
 
 criarHorasSelecao()
