@@ -29,7 +29,6 @@ const atividade = {
     finalizada: true
 }
 // Este é um objeto separado do array atividades para estudarmos/entendermos objetos em js, mas é fácil dar Ctrl + X da linha 3 a 4 e colocar dentro de atividades.
-
 // lista, array, vetor em js - []
 let atividades = [
     atividade,
