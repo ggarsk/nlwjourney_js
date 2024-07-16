@@ -49,7 +49,7 @@ let atividades = [
 
 // arrow function
 const criarItemAtividade = (atividade) => {
-    let input = '<input type="checkbox"'
+    let input = `<input onchange="concluirAtividade(event)" value="${atividade.data}" type="checkbox"`
 
     if(atividade.finalizada) {
         input += 'checked'
@@ -165,3 +165,18 @@ const criarHorasSelecao = () => {
 }
 
 criarHorasSelecao()
+
+const concluirAtividade = (event) => {
+    const input = event.target
+    const dataInput = input.value
+
+    const atividade = atividades.find((atividade) => {
+        return atividade.data == dataInput
+    })
+
+    if(!atividade) {
+        return
+    }
+
+    atividade.finalizada = !atividade.finalizada
+}
