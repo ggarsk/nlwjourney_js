@@ -105,13 +105,21 @@ const salvarAtividade = (event) => {
     const hora = dadosDoFormulario.get('hora')
     const data = `${dia} ${hora}`
 
-    const atividade = {
+    const novaAtividade = {
         nome,
         data,
         finalizada: false
     }
 
-    atividades = [atividade, ...atividades]
+    const atividadeExiste = atividades.find((atividade) => {
+        return atividade.data == novaAtividade.data
+    })
+
+    if(atividadeExiste) {
+        return alert('Dia/Hora não disponível')
+    }
+
+    atividades = [novaAtividade, ...atividades]
     atualizarListaAtv()
 }
 
