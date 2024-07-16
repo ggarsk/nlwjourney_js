@@ -6,6 +6,7 @@ btn.addEventListener('click', function() {
     btn.classList.toggle('dark-mode')
 })
 
+// Funcionalidade para formatar data e hora
 const formatador = (data) => {
     return {
         dia: {
@@ -75,6 +76,7 @@ const criarItemAtividade = (atividade) => {
     `
 }
 
+// Funcionalidade para atualizar a lista de atividades e retornar mensagem de status se a lista estiver limpa
 const atualizarListaAtv = () => {
     const section = document.querySelector('section')
     section.innerHTML = ''
@@ -93,6 +95,7 @@ const atualizarListaAtv = () => {
 
 atualizarListaAtv()
 
+// Funcionalidade para adicionar atividades na lista de atividades
 const salvarAtividade = (event) => {
     event.preventDefault()
     const dadosDoFormulario = new FormData(event.target)
@@ -112,6 +115,7 @@ const salvarAtividade = (event) => {
     atualizarListaAtv()
 }
 
+// Funcionalidade para criar opção de dias para agendar as atividades
 const criarDiasSelecao = () => {
     const dias = [
         '2024-07-28',
@@ -140,7 +144,7 @@ const criarDiasSelecao = () => {
 
 criarDiasSelecao()
 
-
+// Funcionalidade para criar opção de horas para agendar as atividades
 const criarHorasSelecao = () => {
     let horasDisponiveis = ''
 
