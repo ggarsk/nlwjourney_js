@@ -48,8 +48,6 @@ html.white-mode {
     padding: 40px 20px;
     max-width: 320px; /* Configuração para mobile iPhone SE */
     margin: auto;
-
-    border: 1px solid red;
 }
 
 /* form */
@@ -139,7 +137,6 @@ section {
 }
 
 section input[type="checkbox"] {
-    border: 1px solid red;
     position: absolute;
 
     inset: 0;
@@ -148,6 +145,10 @@ section input[type="checkbox"] {
 section .card-bg {
     position: relative;
     padding: 10px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 section .card-bg:has(:checked) .active,
@@ -161,12 +162,15 @@ section .card-bg .active {
 }
 
 section .card-bg > div {
-    
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 time {
     font-size: 14px;
     color: #A1A1AB;
+    text-align: right;
 }
 
 time.full {
