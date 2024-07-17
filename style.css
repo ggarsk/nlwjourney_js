@@ -10,6 +10,9 @@ html, input, select, button, option {
     background-color: #000000;
     color: #FFFFFF;
     transition: background-color 0.3s, color 0.3s;
+
+    line-height: 120%;
+    letter-spacing: -0.02em;
 }
 
 /* White Mode */
@@ -50,6 +53,18 @@ html.white-mode {
 }
 
 /* form */
+#place {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 22px 16px;
+    margin-bottom: 32px;
+
+    font-size: 14px;
+    letter-spacing: -0.02em;
+}
+
 input, select {
     all: unset; /* Propriedade CSS que limpa as configurações default que o HTML ou o CSS trazem para os elementos */ 
 }
@@ -89,5 +104,18 @@ button {
 
     font-weight: 500;
     font-size: 16px;
-    letter-spacing: -0.02em;
+}
+
+.card-bg {
+    background: #18181B;
+
+    box-shadow: 
+    0px 8px 8px rgba(0, 0, 0, 0.1), /* Estrutura: 0px 8px 8px = DeslocamentoX DeslocamentoY DeslocamentoZ*/
+    0px 4px 4px rgba(0,0,0, 0.1), 
+    0px 2px 2px rgba(0, 0, 0, 0.1), 
+    0px 0px 0px 1px rgba(0, 0, 0, 0.1), 
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), /* Sombra interna */
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03); /* Sombra interna */
+
+    border-radius: 12px;
 }
