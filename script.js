@@ -1,9 +1,11 @@
 // Funcionalidade para aplicar um whiteMode na página. Por padrão, será dark e o botão dará opção de deixar white.
 const btn = document.getElementById('whiteMode')
+const title = document.querySelector('h1')
 
 btn.addEventListener('click', function() {
     document.documentElement.classList.toggle('white-mode')
     btn.classList.toggle('dark-mode')
+    title.classList.toggle('white-mode')
 })
 
 // Funcionalidade para formatar data e hora

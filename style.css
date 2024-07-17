@@ -18,6 +18,10 @@ html, input, select, button, option {
 /* White Mode */
 html.white-mode {
     background-color: #FFFFFF;
+    /* color: #000000; */
+}
+
+html h1.white-mode {
     color: #000000;
 }
 
@@ -177,3 +181,37 @@ time.full {
     display: none;
 }
 
+@media (width > 1024px) {
+    #app {
+        display: flex;
+        max-width: 960px;
+        gap: 32px;
+    }
+
+    main {
+        margin-top: 0;
+        flex: 1; /* Essa propriedade em css só funciona quando o item ou elemento está dentro de um pai flex. Ou seja, main é filho de app que é display: flex; */
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    time.full {
+        display: block;
+    }
+
+    time.short {
+        display: none;
+    }
+}
+
+section .card-bg {
+    animation: appear 1.2s;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+}
