@@ -68,5 +68,26 @@ input, select, button {
     background-color: #09090B;
     border: 1px solid #27272A;
     border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre os elementos dessa div */
 }
 
+.field-wrapper:focus-within { /* Ajuda visual para mostrar onde o usuário está selecionando com o mouse */
+    outline: 2px solid yellowgreen;
+}
+
+button {
+    border: none;
+    margin-top: 12px;
+    padding: 12px 20px;
+    
+    background-color: #AFF445;
+    color: #132F00;
+    border-radius: 8px;
+
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+}
