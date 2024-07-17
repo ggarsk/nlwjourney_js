@@ -1,9 +1,18 @@
-html {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, input, select, button, option {
+    font-family: 'Inter', sans-serif;
+
     background-color: #000000;
     color: #FFFFFF;
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* White Mode */
 html.white-mode {
     background-color: #FFFFFF;
     color: #000000;
@@ -30,3 +39,34 @@ html.white-mode {
     background-color: #000000;
     color: #FFFFFF;
 }
+
+/* App */
+#app {
+    padding: 40px 20px;
+    max-width: 320px; /* Configuração para mobile iPhone SE */
+    margin: auto;
+
+    border: 1px solid red;
+}
+
+/* form */
+input, select {
+    all: unset; /* Propriedade CSS que limpa as configurações default que o HTML ou o CSS trazem para os elementos */ 
+}
+
+input, select, button {
+    width: 100%;
+}
+
+.fields {
+    display: grid;
+    gap: 8px;
+}
+
+.field-wrapper {
+    padding: 18px;
+    background-color: #09090B;
+    border: 1px solid #27272A;
+    border-radius: 8px;
+}
+
