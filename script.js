@@ -62,10 +62,27 @@ const criarItemAtividade = (atividade) => {
     const formatar = formatador(atividade.data)
 
     return `
-    <div>
+    <div class="card-bg">
         ${input}
-        <span>${atividade.nome}</span>
-        <time>
+
+        <div>
+            <svg class="active" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.50002 10.0001L9.16669 11.6667L12.5 8.33341M18.3334 10.0001C18.3334 14.6025 14.6024 18.3334 10 18.3334C5.39765 18.3334 1.66669 14.6025 1.66669 10.0001C1.66669 5.39771 5.39765 1.66675 10 1.66675C14.6024 1.66675 18.3334 5.39771 18.3334 10.0001Z" stroke="#BEF264" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <svg class="inactive" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.41658 1.8183C9.46243 1.6159 10.5374 1.6159 11.5832 1.8183M11.5832 18.1816C10.5374 18.384 9.46243 18.384 8.41658 18.1816M14.6741 3.1008C15.5586 3.70016 16.3197 4.46403 16.9157 5.3508M1.81824 11.5833C1.61584 10.5374 1.61584 9.46249 1.81824 8.41664M16.8991 14.6741C16.2997 15.5587 15.5359 16.3197 14.6491 16.9158M18.1816 8.41664C18.384 9.46249 18.384 10.5374 18.1816 11.5833M3.10074 5.3258C3.70009 4.44124 4.46397 3.6802 5.35074 3.08414M5.32574 16.8991C4.44118 16.2998 3.68014 15.5359 3.08408 14.6491" stroke="#A1A1AA" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <span>${atividade.nome}</span>
+        </div>
+
+        <time class="short">
+            ${formatar.dia.semana.curto}.
+            ${formatar.dia.numerico} <br>
+            ${formatar.hora}
+        </time>
+        <time class="full">
         ${formatar.dia.semana.longo},
         dia ${formatar.dia.numerico}
         de ${formatar.mes}

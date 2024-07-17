@@ -64,9 +64,9 @@ html.white-mode {
     font-size: 14px;
     letter-spacing: -0.02em;
 }
-
+ 
 input, select {
-    all: unset; /* Propriedade CSS que limpa as configurações default que o HTML ou o CSS trazem para os elementos */ 
+    all:unset; /* Propriedade CSS que limpa as configurações default que o HTML ou o CSS trazem para os elementos */
 }
 
 input, select, button {
@@ -132,3 +132,44 @@ h1 {
 
     margin-bottom: 24px;
 }
+
+section {
+    display: grid;
+    gap: 10px;
+}
+
+section input[type="checkbox"] {
+    border: 1px solid red;
+    position: absolute;
+
+    inset: 0;
+}
+
+section .card-bg {
+    position: relative;
+    padding: 10px 16px;
+}
+
+section .card-bg:has(:checked) .active,
+section .card-bg .inactive {
+    display: block;
+}
+
+section .card-bg:has(:checked) .inactive,
+section .card-bg .active {
+    display: none;
+}
+
+section .card-bg > div {
+    
+}
+
+time {
+    font-size: 14px;
+    color: #A1A1AB;
+}
+
+time.full {
+    display: none;
+}
+
